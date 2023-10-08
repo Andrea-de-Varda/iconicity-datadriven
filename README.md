@@ -1,4 +1,8 @@
 # iconicity-datadriven
+
+![alt text](https://github.com/Andrea-de-Varda/iconicity-datadriven/blob/main/old/ico.png)
+
+
 Materials for deriving data-driven iconicity measurements in the auditory modality. 
 
 - The scripts for generating the sound embeddings from the VGGish network are in the ``VGGish_iconicity_sound.py`` file
