@@ -1,4 +1,4 @@
-# iconicity-datadriven
+# A Data-driven Study of Auditory Iconicity
 
 ![alt text](https://github.com/Andrea-de-Varda/iconicity-datadriven/blob/main/old/ico.png)
 
@@ -17,6 +17,10 @@ We employ the obtained vector representations to measure their objective sound r
 - The scripts for generating the sound embeddings from the VGGish network are in the ``VGGish_iconicity_sound.py`` file
 - The ones based on the SpeechVGG architecture are in ``SpeechVGG_iconicity_sound.py``
 - The scripts for correlating them with human ratings are in ``Correlations_iconicity_sounds.py``
+
+### R scripts
+- The R file ``lmer_models.R`` analyzes the similarity of word sounds and natural sounds, testing whether matching pairs have higher similarity.
+- The R file ``predict_icoratings.R`` filts a series of linear regression models to predict human iconicity judgements on the basis of the similarity between word and natural sound vectors.
 
 A dataframe reporting the iconicity scores obtained with our experiments, as well as the human ratings employed for the validation (Winter et al., [2017](https://www.researchgate.net/publication/318364562_Which_words_are_most_iconic_Iconicity_in_English_sensory_words), [2022](https://osf.io/qvw6u/)), are reported in the folder **additional-data**.
 
