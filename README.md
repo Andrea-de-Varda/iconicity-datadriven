@@ -22,9 +22,14 @@ We employ the obtained vector representations to measure their objective sound r
 - The R file ``lmer_models.R`` analyzes the similarity of word sounds and natural sounds, testing whether matching pairs have higher similarity.
 - The R file ``predict_icoratings.R`` filts a series of linear regression models to predict human iconicity judgements on the basis of the similarity between word and natural sound vectors.
 
+### Data and pre-computed metrics
+Unfortunately, due to copyright restrictions we are unable to release the raw sound data we employed in our analyses, as the different sound files are protected by different copyright restrictions. We release however aggregated data from the two networks (VGGish and SpeechVGG), and the final inconicity measurements that we obtained with our procedure. 
+
 A dataframe reporting the iconicity scores obtained with our experiments, as well as the human ratings employed for the validation (Winter et al., [2017](https://www.researchgate.net/publication/318364562_Which_words_are_most_iconic_Iconicity_in_English_sensory_words), [2022](https://osf.io/qvw6u/)), are reported in the folder **additional-data**.
 
 Our analyses are based on two pre-trained convolutional neural networks, that are publicly available :
 
 - [SpeechVGG](https://github.com/bepierre/SpeechVGG)
 - [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) (although we employed the tf-hub release, see ``VGGish_iconicity_sound.py``)
+
+We also use the sensory norms released by [Lynott et al. (2019)](https://link.springer.com/article/10.3758/s13428-019-01316-z) (remember to provide the correct path to the norms in the Python scripts).
