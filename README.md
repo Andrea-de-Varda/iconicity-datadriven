@@ -2,8 +2,17 @@
 
 ![alt text](https://github.com/Andrea-de-Varda/iconicity-datadriven/blob/main/old/ico.png)
 
+## Motivation
 
-Materials for deriving data-driven iconicity measurements in the auditory modality. 
+Auditory iconic words such as onomatopoetic words (_crack_, _bubble_, _whisper_) imitate in their phonological form the sound of their referents. This study aims to test the pervasiveness of iconicity in English through a data-driven procedure. The analyses are based on the representation of word and natural sounds into a shared vector space through:
+
+1. a short-time Fourier transform
+2. a convolutional neural network trained to classify sounds
+3. a network trained on speech recognition
+
+We employ the obtained vector representations to measure their objective sound resemblance. Their similarity metric is employed to (a) assess the pervasiveness of iconicity in the auditory vocabulary, and (b) predict human iconicity ratings.
+
+## Materials and scripts
 
 - The scripts for generating the sound embeddings from the VGGish network are in the ``VGGish_iconicity_sound.py`` file
 - The ones based on the SpeechVGG architecture are in ``SpeechVGG_iconicity_sound.py``
