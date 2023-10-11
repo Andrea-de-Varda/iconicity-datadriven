@@ -32,4 +32,8 @@ Our analyses are based on two pre-trained convolutional neural networks, that ar
 - [SpeechVGG](https://github.com/bepierre/SpeechVGG)
 - [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) (although we employed the tf-hub release, see ``VGGish_iconicity_sound.py``)
 
-We also use the sensory norms released by [Lynott et al. (2019)](https://link.springer.com/article/10.3758/s13428-019-01316-z) (remember to provide the correct path to the norms in the Python scripts).
+In our prediction of human ratings, we make use of several pre-existing datasets[^1]:
+We also use the sensory norms released by [Lynott et al. (2019)](https://link.springer.com/article/10.3758/s13428-019-01316-z)
+
+
+[^1] Remember to provide the correct path to the norms in the Python scripts.
