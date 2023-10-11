@@ -29,7 +29,35 @@ The R scripts are available in the ``python`` folder.
 To successfully run the scripts it is important that you have a folder ``MALD1_rw`` (as it can be downloaded [here](http://mald.artsrn.ualberta.ca/)). 
 
 ### Data and pre-computed metrics
-Unfortunately, due to copyright restrictions we are unable to release the raw sound data we employed in our analyses, as the different sound files are protected by different copyright restrictions. We release however aggregated data from the two networks (VGGish and SpeechVGG), and the final inconicity measurements that we obtained with our procedure. 
+Unfortunately, due to copyright restrictions we are unable to release the raw sound data we employed in our analyses, as the different sound files are protected by different copyright restrictions. We release however pre-processed data from the two networks (VGGish and SpeechVGG), and the final inconicity measurements that we obtained with our procedure. 
+
+The pre-processed data from the two networks is available in the folder ``additional_data``. The files of interest are ``word_sounds_VGGish``, ``natural_sounds_VGGish``, ``word_sounds_SpeechVGG``, ``natural_sounds_SpeechVGG``. They are Python dictionaries that can be easily loaded as:
+
+```python
+import pickle
+
+with open("natural_sounds_VGGish", 'rb') as handle:
+    natural_sounds_VGGish = pickle.load(handle)
+```
+
+They are organized as a dictionary where the key indicates the label for which the sounds where extracted, and the value is a list of numpy arrays. Each arrays corresponds to the sound representation of one specific instance of a natural sound, as scaped from Freesound. Below is an example of how the data are structured:
+
+```python
+{'man': [array([ 0.24334893, -0.21349812,  0.13270998, -0.5002561 , -0.18519397,
+         -0.43334043, -0.24831858, -0.3443597 , -0.26181513,  0.10784349,
+         -0.47075054, -0.5784661 , -0.47967815, -0.1911524 , -0.06631487,
+          [...]
+         -0.2263436 , -0.5942359 ,  0.15638947, -0.839978  ,  0.39491096,
+          0.40798616, -0.15921661, -0.06044232, -0.04705894, -0.10617545,
+          0.15600096, -0.00818225, -0.38729894], dtype=float32),
+  array([ 1.92212760e-02, -2.53211856e-02,  8.34971666e-04, -1.49130642e-01,
+          1.22893751e-02, -1.84382632e-01, -3.79019916e-01,  1.32700175e-01,
+         [...]
+         -4.32686716e-01,  1.83223188e-01, -6.68203831e-01,  2.66942441e-01,
+          6.02958798e-02, -8.18358138e-02, -7.08016753e-02,  8.71086121e-03,
+          5.13320446e-01,  1.70548424e-01, -2.70681679e-02, -4.12309706e-01],
+        dtype=float32), [...]}
+```
 
 A dataframe reporting the iconicity scores obtained with our experiments, as well as the human ratings employed for the validation (Winter et al., [2017](https://www.researchgate.net/publication/318364562_Which_words_are_most_iconic_Iconicity_in_English_sensory_words), [2022](https://osf.io/qvw6u/)), are reported in the folder **additional-data** under ``icodf_covariates.csv`` 
 
