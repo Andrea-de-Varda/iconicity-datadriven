@@ -14,25 +14,31 @@ We employ the obtained vector representations to measure their objective sound r
 
 ## Materials and scripts
 
-- The scripts for generating the sound embeddings from the VGGish network are in the ``VGGish_iconicity_sound.py`` file
-- The ones based on the SpeechVGG architecture are in ``SpeechVGG_iconicity_sound.py``
-- The scripts for correlating them with human ratings are in ``Correlations_iconicity_sounds.py``
+### Python scripts
+The python scripts are available in the ``python`` folder.
+- The scripts for generating the sound embeddings from the VGGish network are in the ``VGGish_iconicity.py`` file
+- The ones based on the SpeechVGG architecture are in ``SpeechVGG_iconicity.py``. This script assumes that you have cloned the [SpeechVGG](https://github.com/bepierre/SpeechVGG) repository in your working directory.
+- The ones based on the sound spectra are in the ``spectrogram_iconicity.py`` file
+- The scripts for correlating them with human ratings and extracting the various covariates are in ``correlational_analyses.py``. This script assumes that you have downloaded the necessary resources, and you provide the correct path to locate them in your computer (see below for the links and details).
 
 ### R scripts
+The R scripts are available in the ``python`` folder.
 - The R file ``lmer_models.R`` analyzes the similarity of word sounds and natural sounds, testing whether matching pairs have higher similarity.
 - The R file ``predict_icoratings.R`` filts a series of linear regression models to predict human iconicity judgements on the basis of the similarity between word and natural sound vectors.
+
+To successfully run the scripts it is important that you have a folder ``MALD1_rw`` (as it can be downloaded [here](http://mald.artsrn.ualberta.ca/)). 
 
 ### Data and pre-computed metrics
 Unfortunately, due to copyright restrictions we are unable to release the raw sound data we employed in our analyses, as the different sound files are protected by different copyright restrictions. We release however aggregated data from the two networks (VGGish and SpeechVGG), and the final inconicity measurements that we obtained with our procedure. 
 
-A dataframe reporting the iconicity scores obtained with our experiments, as well as the human ratings employed for the validation (Winter et al., [2017](https://www.researchgate.net/publication/318364562_Which_words_are_most_iconic_Iconicity_in_English_sensory_words), [2022](https://osf.io/qvw6u/)), are reported in the folder **additional-data**.
+A dataframe reporting the iconicity scores obtained with our experiments, as well as the human ratings employed for the validation (Winter et al., [2017](https://www.researchgate.net/publication/318364562_Which_words_are_most_iconic_Iconicity_in_English_sensory_words), [2022](https://osf.io/qvw6u/)), are reported in the folder **additional-data** under ``icodf_covariates.csv`` 
 
 
 ## Pre-existing resources
 Our analyses are based on two pre-trained convolutional neural networks, that are publicly available :
 
 - [SpeechVGG](https://github.com/bepierre/SpeechVGG)
-- [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) (although we employed the tf-hub release, see ``VGGish_iconicity_sound.py``)
+- [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) (although we employed the tf-hub release, see ``VGGish_iconicity.py``)
 
 > [!NOTE]
 > In our prediction of human ratings, we make use of several pre-existing datasets. Remember to provide the correct path to the norms in the Python scripts, and to cite the relevant articles if you use these norms.
