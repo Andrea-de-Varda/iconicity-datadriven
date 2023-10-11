@@ -32,8 +32,13 @@ Our analyses are based on two pre-trained convolutional neural networks, that ar
 - [SpeechVGG](https://github.com/bepierre/SpeechVGG)
 - [VGGish](https://github.com/tensorflow/models/tree/master/research/audioset/vggish) (although we employed the tf-hub release, see ``VGGish_iconicity_sound.py``)
 
-In our prediction of human ratings, we make use of several pre-existing datasets[^1]:
-We also use the sensory norms released by [Lynott et al. (2019)](https://link.springer.com/article/10.3758/s13428-019-01316-z)
+> [!NOTE]
+> In our prediction of human ratings, we make use of several pre-existing datasets. Remember to provide the correct path to the norms in the Python scripts, and to cite the relevant articles if you use these norms.
 
+- Iconicity ratings, dataset 1 released by [Winter et al., 2017](http://pure-oai.bham.ac.uk/ws/files/38406823/sensory_iconicity_revisions_final.pdf)
+- Iconicity ratings, dataset 2 released by [Winter et al., 2022](https://link.springer.com/article/10.3758/s13428-023-02112-6)
+- Sensory norms released by [Lynott et al. 2019](https://link.springer.com/article/10.3758/s13428-019-01316-z)
+- Concreteness estimates released by [Brysbaert et al., 2014](https://link.springer.com/article/10.3758/s13428-013-0403-5)
+- Frequency norms released by [Brysbaert et al., 2012](https://link.springer.com/article/10.3758/s13428-012-0190-4)
+- Age-of-Acquisition norms released by [Kuperman et al., 2012](https://link.springer.com/article/10.3758/s13428-012-0210-4)
 
-[^1] Remember to provide the correct path to the norms in the Python scripts.
