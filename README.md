@@ -27,6 +27,8 @@ Unfortunately, due to copyright restrictions we are unable to release the raw so
 
 A dataframe reporting the iconicity scores obtained with our experiments, as well as the human ratings employed for the validation (Winter et al., [2017](https://www.researchgate.net/publication/318364562_Which_words_are_most_iconic_Iconicity_in_English_sensory_words), [2022](https://osf.io/qvw6u/)), are reported in the folder **additional-data**.
 
+
+## Pre-existing resources
 Our analyses are based on two pre-trained convolutional neural networks, that are publicly available :
 
 - [SpeechVGG](https://github.com/bepierre/SpeechVGG)
