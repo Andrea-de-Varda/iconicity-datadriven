@@ -192,7 +192,7 @@ icodf = icodf.sort_values(by="i", ascending=False).dropna()
 icodf.head(10)
 icodf.tail(10)
 
-icodf.to_csv("icodf_spectrum.csv")
+icodf.to_csv("icodf_spectrum_cleaned.csv")
 
 markedness_dict = {}
 for word, vec in word_sounds.items():
