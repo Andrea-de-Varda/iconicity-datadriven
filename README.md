@@ -61,6 +61,8 @@ They are organized as a dictionary where the key indicates the label for which t
 
 A dataframe reporting the iconicity scores obtained with our experiments, as well as the human ratings employed for the validation (Winter et al., [2017](https://www.researchgate.net/publication/318364562_Which_words_are_most_iconic_Iconicity_in_English_sensory_words), [2022](https://osf.io/qvw6u/)), are reported in the folder **additional-data** under ``icodf_covariates.csv`` 
 
+The csv files on which the main R analyses are based (i.e., the cosine similarities between matching and non-matching word/natural sounds) cannot be uploaded to GitHub since the files are too big. They can be downloaded [here](https://drive.google.com/drive/folders/1ttvlYcK10NYC3KsyzMxBrhnroCVgcnub?usp=sharing).
+
 
 ## Pre-existing resources
 Our analyses are based on two pre-trained convolutional neural networks, that are publicly available :
